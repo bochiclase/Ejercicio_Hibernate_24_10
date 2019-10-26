@@ -1,3 +1,4 @@
+
 package pruebasMaven.util;
 
 import javax.persistence.EntityManager;

@@ -33,18 +33,41 @@ public class AsignaturaBean {
 	private List<AlumnoBean> alumnos = new ArrayList<AlumnoBean>();
 	
 
+	
 	@ManyToOne
 	private ProfesorBean profesor;
 	
 	
+	/*-----------Ejercicio de casa--------------------------*/
 	
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<ProfesorBean> profesores = new ArrayList<ProfesorBean>();
+	
+	 public List<ProfesorBean> getProfesores() {
+		return profesores;
+	 	}
+
+	 
+	 public void setProfesores(List<ProfesorBean> profesores) {
+			this.profesores = profesores;
+		}
+	
+	/*--------------------------------------------------*/
+
+	
+
+
+	
+
+
+
 	public void addAlumno(AlumnoBean alumno) {
 		
 		if(!alumnos.contains(alumno)) {
 			
 			alumnos.add(alumno);
 			
-			// decirle al alumno que añada esta asignatura
+			// decirle al alumno que aï¿½ada esta asignatura
 			List<AsignaturaBean> asignaturas = alumno.getAsignaturas();
 			if(!asignaturas.contains(this)) {
 				

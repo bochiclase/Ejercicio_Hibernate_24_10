@@ -36,7 +36,7 @@ public class Start {
 		
 
 		
-		
+		 
 		
 		AlumnoBean maria = new AlumnoBean();
 		maria.setNombre("Maria");
@@ -51,6 +51,8 @@ public class Start {
 		
 		monica.addAsignatura(lengua);
 		monica.addAsignatura(filosofia);
+		monica.addAsignatura2(lengua);
+		monica.addAsignatura2(filosofia);
 		
 		
 		filosofia.addAlumno(marcos);

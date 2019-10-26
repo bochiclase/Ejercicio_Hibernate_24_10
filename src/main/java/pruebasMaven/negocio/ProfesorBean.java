@@ -35,8 +35,8 @@ public class ProfesorBean {
 	private List<AsignaturaBean> asignaturas = new ArrayList<AsignaturaBean>();
 	
 	
-	
-	public void addAsignatura(AsignaturaBean asignatura) {
+	/* modificada por mi*/
+	public void addAsignatura2(AsignaturaBean asignatura) {
 		
 		if(!asignaturas.contains(asignatura)) {
 			
@@ -44,8 +44,39 @@ public class ProfesorBean {
 			asignatura.setProfesor(this);
 		}
 	}
+
+	/*-------------Ejercicio de casa---------------*/
+	
+	@ManyToMany(mappedBy = "profesores", cascade = CascadeType.ALL)
+	private List<AsignaturaBean> asignatura = new ArrayList<AsignaturaBean>();
 	
 	
+	public List<AsignaturaBean> getAsignatura() {
+		return asignatura;
+	}
+	public void setAsignatura(List<AsignaturaBean> asignatura) {
+		this.asignatura = asignatura;
+	}
+	
+	
+	public void addAsignatura(AsignaturaBean asignaturas) {
+		
+		if(!asignatura.contains(asignaturas)) {
+			
+			asignatura.add(asignaturas);
+			
+			// decirle al profesor que a�ada esta asignatura
+			List<ProfesorBean> profe = asignaturas.getProfesores();
+			if(!profe.contains(this)) {
+				
+				profe.add(this);
+			}
+		}
+	}
+	
+	
+	
+	/*------------------------------------------------------*/
 	public long getIdProfesor() {
 		return idProfesor;
 	}
