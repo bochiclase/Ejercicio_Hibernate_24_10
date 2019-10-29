@@ -34,7 +34,7 @@ public class ProfesorBean {
 	@OneToMany(mappedBy="profesor", cascade = CascadeType.ALL)
 	private List<AsignaturaBean> asignaturas = new ArrayList<AsignaturaBean>();
 	
-	
+	 
 	/* modificada por mi*/
 	public void addAsignatura2(AsignaturaBean asignatura) {
 		

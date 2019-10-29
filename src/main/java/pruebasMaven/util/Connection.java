@@ -25,5 +25,5 @@ public class Connection {
 			new Connection();
 		}
 		return entityManager;
-	}
+	} 
 }

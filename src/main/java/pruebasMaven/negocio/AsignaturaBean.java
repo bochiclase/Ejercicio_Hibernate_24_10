@@ -66,7 +66,7 @@ public class AsignaturaBean {
 		if(!alumnos.contains(alumno)) {
 			
 			alumnos.add(alumno);
-			
+			 
 			// decirle al alumno que a�ada esta asignatura
 			List<AsignaturaBean> asignaturas = alumno.getAsignaturas();
 			if(!asignaturas.contains(this)) {

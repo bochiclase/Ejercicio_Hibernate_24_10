@@ -35,8 +35,13 @@ public class Start {
 		mates.setNombre("mates");
 		
 
+
+		monica.addAsignatura(lengua);
+		monica.addAsignatura(filosofia);
 		
 		 
+		
+		
 		
 		AlumnoBean maria = new AlumnoBean();
 		maria.setNombre("Maria");
@@ -49,14 +54,10 @@ public class Start {
 		marcos.setTelefono("666555444");
 
 		
-		monica.addAsignatura(lengua);
-		monica.addAsignatura(filosofia);
-		monica.addAsignatura2(lengua);
-		monica.addAsignatura2(filosofia);
-		
-		
 		filosofia.addAlumno(marcos);
 		filosofia.addAlumno(maria);
+		
+		
 		
 		
 	
